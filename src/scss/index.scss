@@ -1,0 +1,24 @@
+.app-wrapper {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-areas:
+    "nav-section main-section main-section main-section main-section main-section";
+
+  .nav-section {
+    grid-area: nav-section;
+  }
+
+  .main-section {
+    grid-area: main-section;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .app-wrapper {
+    grid-template-areas:
+      "nav-section nav-section nav-section nav-section nav-section nav-section"
+      "main-section main-section main-section main-section main-section main-section";
+  }
+}
+
