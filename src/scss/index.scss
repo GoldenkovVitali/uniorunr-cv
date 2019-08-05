@@ -4,13 +4,16 @@
   grid-template-columns: auto auto auto auto auto auto;
   grid-template-areas:
     "nav-section main-section main-section main-section main-section main-section";
+  margin: 0 40px;
 
   .nav-section {
     grid-area: nav-section;
+    margin-top: 40px;
   }
 
   .main-section {
     grid-area: main-section;
+    margin-top: 40px;
   }
 }
 
