@@ -6,13 +6,13 @@ import Menu from '../components/Menu/Menu';
 
 class Layout extends Component {
   state = {
-    activeTab: 1,
+    activeTab: 'summary',
   }
 
   render() {
     const { activeTab } = this.state;
     const { children, location } = this.props;
-    console.log(children, location, activeTab);
+    // eslint-disable-next-line max-len
     const childrenWithProps = React.Children.map(children, child => React.cloneElement(child, { activeTab }));
 
     return (
@@ -21,7 +21,7 @@ class Layout extends Component {
         <div className="app-wrapper">
           <aside className="nav-section">
             <Avatar />
-            <Menu />
+            <Menu location={location} />
           </aside>
           <main className="main-section">{childrenWithProps}</main>
         </div>
@@ -32,6 +32,7 @@ class Layout extends Component {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.instanceOf(Object).isRequired,
 };
 
 export default Layout;

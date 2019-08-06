@@ -16,6 +16,7 @@ const Avatar = () => {
         contentfulSiteAuthorData {
           name
           location
+          position
         }
       }
     `,
@@ -29,9 +30,12 @@ const Avatar = () => {
         alt={contentfulAsset.description}
       />
       <h1 className="avatar-section__name">{contentfulSiteAuthorData.name}</h1>
-      <h2 className="avatar-section__location">
-        {contentfulSiteAuthorData.location}
+      <h2 className="avatar-section__position">
+        {contentfulSiteAuthorData.position}
       </h2>
+      <p className="avatar-section__location">
+        {contentfulSiteAuthorData.location}
+      </p>
     </section>
   );
 };

@@ -1,18 +1,18 @@
 .app-wrapper {
   display: grid;
   grid-gap: 20px;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-areas: "nav-section main-section";
-  margin: 0 40px;
+  margin: 0 80px;
 
   .nav-section {
     grid-area: nav-section;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 
   .main-section {
     grid-area: main-section;
-    margin-top: 40px;
+    margin-top: 50px;
   }
 }
 
