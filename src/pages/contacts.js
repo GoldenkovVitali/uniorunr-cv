@@ -2,6 +2,6 @@ import React from 'react';
 import '../scss/generic.scss';
 import '../scss/index.scss';
 
-const IndexPage = () => <div>test</div>;
+const ContactsPage = () => <div>test1</div>;
 
-export default IndexPage;
+export default ContactsPage;
