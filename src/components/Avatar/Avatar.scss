@@ -1,16 +1,24 @@
 .avatar-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  width: fit-content;
 
   .avatar-section__avatar {
     width: 50%;
+    max-width: 250px;
     border-radius: 50%;
-    margin: 10px;
   }
 
   .avatar-section__name {
     font-weight: normal;
     font-size: 1.4rem;
+    margin: 20px 0 15px;
+  }
+
+  .avatar-section__location {
+    font-weight: normal;
+    font-size: 1rem;
+    margin: 0;
   }
 }
