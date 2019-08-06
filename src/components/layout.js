@@ -4,11 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+    query {
+      contentfulSiteTitle {
+        title
       }
     }
   `);

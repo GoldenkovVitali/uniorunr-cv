@@ -1,32 +1,41 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
-    title: `Curriculum Vitae`,
-    description: `Curriculum Vitae`,
-    author: `https://github.com/uniorunr/`,
+    title: 'Curriculum Vitae',
+    description: 'Curriculum Vitae',
+    author: 'https://github.com/uniorunr/',
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        name: 'gatsby-starter-default',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png',
       },
     },
     'gatsby-plugin-sass',
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
   ],
-}
+};
