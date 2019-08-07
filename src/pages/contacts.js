@@ -18,7 +18,7 @@ const ContactsPage = () => {
 
   return (
     <section className="contacts">
-      <h2>Contacts</h2>
+      <h2>&gt; Contacts</h2>
       <ul className="contacts__list">
         <li>
           GitHub:{' '}

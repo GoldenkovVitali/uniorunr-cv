@@ -21,6 +21,7 @@ const IndexPage = () => {
 
   return (
     <Fragment>
+      <h2>&gt; Summary</h2>
       {paragraphs.map(paragraph => (
         <p key={paragraph.id}>{paragraph.data}</p>
       ))}
