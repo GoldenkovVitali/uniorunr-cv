@@ -12,7 +12,13 @@
 
   .main-section {
     grid-area: main-section;
-    margin-top: 50px;
+    margin: 50px 0;
+
+    p {
+      margin: 20px 0;
+      line-height: 20px;
+      text-align: justify;
+    }
   }
 }
 
@@ -22,6 +28,11 @@
     grid-template-areas:
       "nav-section"
       "main-section";
+    margin: 0 40px;
+
+    .main-section {
+      margin: 10px 0 40px;
+    }
   }
 }
 

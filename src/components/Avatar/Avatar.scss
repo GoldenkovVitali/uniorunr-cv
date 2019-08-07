@@ -7,6 +7,7 @@
   .avatar-section__avatar {
     width: 50%;
     max-width: 250px;
+    max-height: 250px;
     border-radius: 50%;
   }
 
@@ -26,5 +27,12 @@
     font-weight: normal;
     font-size: 1rem;
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .avatar-section {
+    width: 100%;
+    align-items: center;
   }
 }
