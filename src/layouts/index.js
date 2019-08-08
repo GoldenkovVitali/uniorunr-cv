@@ -9,16 +9,42 @@ class Layout extends Component {
     activeTab: 'summary',
   }
 
+  tabs = [
+    'summary',
+    'skills',
+    'experience',
+    'projects',
+    'education',
+    'english',
+    'contacts',
+  ]
+
+  componentDidMount() {
+    const { location } = this.props;
+    if (location) {
+      if (location.pathname === '/') {
+        this.setState({
+          activeTab: 'summary',
+        });
+      } else {
+        this.setState({
+          activeTab: location.pathname.replace('/', '').replace('/', ''),
+        });
+      }
+    }
+  }
+
   render() {
     const { activeTab } = this.state;
     const { children, location } = this.props;
     // eslint-disable-next-line max-len
     const childrenWithProps = React.Children.map(children, child => React.cloneElement(child, { activeTab }));
+    console.log(activeTab);
 
     return (
       <Fragment>
         <SEO title="Home" />
-        {location.pathname ? (
+        {this.tabs.includes(activeTab) ? (
           <div className="app-wrapper">
             <aside className="nav-section">
               <Avatar />
@@ -26,9 +52,8 @@ class Layout extends Component {
             </aside>
             <main className="main-section">{childrenWithProps}</main>
           </div>
-        ) : (
-          <main className="main-section">{childrenWithProps}</main>
-        )}
+        ) : null}
+        <div className="404-page">{childrenWithProps}</div>
       </Fragment>
     );
   }
