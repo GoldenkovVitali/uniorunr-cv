@@ -9,17 +9,17 @@ class Menu extends Component {
   }
 
   componentDidMount() {
-    const {
-      location: { pathname },
-    } = this.props;
-    if (pathname === '/') {
-      this.setState({
-        activeTab: 'summary',
-      });
-    } else {
-      this.setState({
-        activeTab: pathname.replace('/', '').replace('/', ''),
-      });
+    const { location } = this.props;
+    if (location) {
+      if (location.pathname === '/') {
+        this.setState({
+          activeTab: 'summary',
+        });
+      } else {
+        this.setState({
+          activeTab: location.pathname.replace('/', '').replace('/', ''),
+        });
+      }
     }
   }
 

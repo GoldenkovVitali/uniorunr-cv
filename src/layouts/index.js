@@ -18,13 +18,17 @@ class Layout extends Component {
     return (
       <Fragment>
         <SEO title="Home" />
-        <div className="app-wrapper">
-          <aside className="nav-section">
-            <Avatar />
-            <Menu location={location} />
-          </aside>
+        {location.pathname ? (
+          <div className="app-wrapper">
+            <aside className="nav-section">
+              <Avatar />
+              <Menu location={location} />
+            </aside>
+            <main className="main-section">{childrenWithProps}</main>
+          </div>
+        ) : (
           <main className="main-section">{childrenWithProps}</main>
-        </div>
+        )}
       </Fragment>
     );
   }
