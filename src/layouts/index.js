@@ -28,7 +28,7 @@ class Layout extends Component {
         });
       } else {
         this.setState({
-          activeTab: location.pathname.replace('/', '').replace('/', ''),
+          activeTab: location.pathname.replace(/\//g, ''),
         });
       }
     }
