@@ -39,7 +39,6 @@ class Layout extends Component {
     const { children, location } = this.props;
     // eslint-disable-next-line max-len
     const childrenWithProps = React.Children.map(children, child => React.cloneElement(child, { activeTab }));
-    console.log(activeTab);
 
     return (
       <Fragment>
@@ -52,8 +51,9 @@ class Layout extends Component {
             </aside>
             <main className="main-section">{childrenWithProps}</main>
           </div>
-        ) : null}
-        <div className="404-page">{childrenWithProps}</div>
+        ) : (
+          <div className="404-page">{childrenWithProps}</div>
+        )}
       </Fragment>
     );
   }
