@@ -1,0 +1,29 @@
+.projects-list {
+  margin: 0;
+  padding: 0 0 0 30px;
+
+  .project-card {
+    margin-top: 35px;
+
+    .project-name {
+      font-weight: normal;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .stack-icons {
+      display: flex;
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 0 5px;
+      }
+    }
+
+    .project-description {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+  }
+}

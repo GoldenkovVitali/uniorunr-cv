@@ -14,6 +14,7 @@ class Layout extends Component {
     'skills',
     'experience',
     'projects',
+    'project',
     'education',
     'english',
     'contacts',
