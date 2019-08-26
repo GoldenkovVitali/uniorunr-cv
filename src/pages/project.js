@@ -11,6 +11,7 @@ import reduxIcon from '../assets/icons/redux.png';
 import sassIcon from '../assets/icons/sass.png';
 import typescriptIcon from '../assets/icons/typescript.png';
 import webpackIcon from '../assets/icons/webpack.png';
+import SEO from '../components/seo';
 import '../scss/project.scss';
 
 const icons = {
@@ -60,6 +61,7 @@ const ProjectPage = ({ location: { hash } }) => {
 
   return (
     <Fragment>
+      <SEO title={projectData.name} />
       <article className="project-info">
         <h2>{projectData.name}</h2>
         <p>

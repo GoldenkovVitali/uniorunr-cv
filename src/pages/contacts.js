@@ -1,6 +1,7 @@
 import React from 'react';
-import '../scss/contacts.scss';
 import { graphql, useStaticQuery } from 'gatsby';
+import SEO from '../components/seo';
+import '../scss/contacts.scss';
 
 const ContactsPage = () => {
   const { contentfulSiteAuthorData } = useStaticQuery(
@@ -18,6 +19,7 @@ const ContactsPage = () => {
 
   return (
     <section className="contacts">
+      <SEO title="Contacts" />
       <h2>&gt; Contacts</h2>
       <ul className="contacts__list">
         <li>

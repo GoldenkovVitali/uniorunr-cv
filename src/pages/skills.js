@@ -1,6 +1,7 @@
 import React from 'react';
-import '../scss/skills.scss';
 import { graphql, useStaticQuery } from 'gatsby';
+import SEO from '../components/seo';
+import '../scss/skills.scss';
 
 const SkillsPage = () => {
   const {
@@ -24,6 +25,7 @@ const SkillsPage = () => {
 
   return (
     <section className="skills">
+      <SEO title="Skills" />
       <h2>&gt; Skills</h2>
       <ul className="skills__categories-list">
         {list.map(category => (

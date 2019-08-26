@@ -10,6 +10,7 @@ import reduxIcon from '../assets/icons/redux.png';
 import sassIcon from '../assets/icons/sass.png';
 import typescriptIcon from '../assets/icons/typescript.png';
 import webpackIcon from '../assets/icons/webpack.png';
+import SEO from '../components/seo';
 import '../scss/projects.scss';
 
 const icons = {
@@ -47,6 +48,7 @@ const ProjectsPage = () => {
 
   return (
     <Fragment>
+      <SEO title="Projects" />
       <h2>&gt; Projects</h2>
       <ul className="projects-list">
         {list.map(project => (
