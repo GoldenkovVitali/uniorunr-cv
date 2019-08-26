@@ -4,14 +4,18 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 const SkillsPage = () => {
   const {
-    contentfulSkills: { skills },
+    contentfulSkills: {
+      skills: { list },
+    },
   } = useStaticQuery(
     graphql`
       query {
         contentfulSkills {
           skills {
-            data
-            id
+            list {
+              name
+              data
+            }
           }
         }
       }
@@ -20,10 +24,17 @@ const SkillsPage = () => {
 
   return (
     <section className="skills">
-      <h2>&gt; Primary Skills</h2>
-      <ul className="skills__list">
-        {skills.map(skill => (
-          <li key={skill.id}>{skill.data}</li>
+      <h2>&gt; Skills</h2>
+      <ul className="skills__categories-list">
+        {list.map(category => (
+          <div key={category.name}>
+            <h3>{category.name}</h3>
+            <ul>
+              {category.data.map(skill => (
+                <li key={skill}>{skill}</li>
+              ))}
+            </ul>
+          </div>
         ))}
       </ul>
     </section>
