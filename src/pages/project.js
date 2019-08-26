@@ -56,9 +56,7 @@ const ProjectPage = ({ location: { hash } }) => {
     `,
   );
 
-  const projectData = list.find(
-    project => project.projectId === hash.replace('#', ''),
-  );
+  const projectData = list.find(project => project.projectId === hash.replace('#', '')) || list[0];
 
   return (
     <Fragment>
