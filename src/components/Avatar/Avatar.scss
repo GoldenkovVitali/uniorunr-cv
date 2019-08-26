@@ -5,9 +5,7 @@
   width: fit-content;
 
   .avatar-section__avatar {
-    width: 50%;
-    max-width: 250px;
-    max-height: 250px;
+    width: 120px;
     border-radius: 50%;
   }
 
@@ -34,5 +32,9 @@
   .avatar-section {
     width: 100%;
     align-items: center;
+
+    .avatar-section__avatar {
+      width: 180px;
+    }
   }
 }
