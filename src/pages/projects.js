@@ -38,6 +38,7 @@ const ProjectsPage = () => {
             description
             website
             stack
+            projectId
           }
         }
       }
@@ -50,7 +51,7 @@ const ProjectsPage = () => {
       <ul className="projects-list">
         {list.map(project => (
           <li key={project.id} className="project-card">
-            <Link to="/project">
+            <Link to={`/project#${project.projectId}`}>
               <h3 className="project-name">{project.name}</h3>
             </Link>
             <p className="project-description">{project.description}</p>
